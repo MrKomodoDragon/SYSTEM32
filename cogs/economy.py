@@ -260,7 +260,7 @@ class Economy(commands.Cog, command_attrs=dict(hidden=False)):
         await qembed(ctx,
                      f'Reset the command cooldown for the command `{command}` and subtracted $400 from your account.')
 
-    @commands.command(help='Buys a stock. BETA')
+    @commands.command(help='Buys a stock. BETA\nTo get a list of stocks, visit https://stockanalysis.com/stocks/')
     async def buy(self, ctx, ticker: str = 'MSFT', amount = '1'):
 
         wallet, bank = await self.get_stats(self, ctx.author.id)
